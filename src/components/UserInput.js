@@ -1,12 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function UserInput ({onSend, onTextChange, inputNumber}){
+function UserInput ({onSubmit, onChange, inputNumber}){
     return (
-        <form onSubmit={onSend}>
+        <form onSubmit={onSubmit}>
             <label>
                 Please input a number between 1 and 100:
-                <input type="text" value={inputNumber} onChange={onTextChange} />
+                <input type="text" value={inputNumber} onChange={onChange} />
             </label>
             <input type="submit" value="Submit" />
         </form>
@@ -14,8 +14,8 @@ function UserInput ({onSend, onTextChange, inputNumber}){
 }
 
 UserInput.propTypes = {
-    onSend: PropTypes.func.isRequired,
-    onTextChange: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
     inputNumber: PropTypes.string
 };
 

@@ -1,7 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 
 import UserInput from '../components/UserInput';
+import Toggle from '../components/Toggle';
 import FizzBuzz from '../utils/FizzBuzz';
 
 class App extends React.Component {
@@ -9,40 +10,44 @@ class App extends React.Component {
         super(props);
         this.state = {
             inputNumber: '',
-            submitted: false
+            submitted: false,
+            fizz: true
         };
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this); 
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleToggle = this.handleToggle.bind(this); 
+        
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({ submitted: true});
+        this.setState({ submitted: true });
     }
     
     handleChange(event) {
-        this.setState({ inputNumber: event.target.value });
+        this.setState({ inputNumber: event.target.value, submitted: false });
     }
 
-    renderText(text){
-        return (
-            <div>
-                <p>{text}</p>
-            </div>
-        )
+    handleToggle(event) {
+        this.setState({ fizz: !this.state.fizz });
+        console.log(this.state.fizz);
     }
-    render(){
+
+    
+    render() {
         const {inputNumber, submitted} = this.state;
-        if(submitted){
-            return FizzBuzz(inputNumber); 
-        }
+
         return (
-            <UserInput 
-            onSend={this.handleSubmit}
-            onTextChange={this.handleChange}
-            currentText={inputNumber}
-            />
+            <React.Fragment>
+                <Toggle onToggle={this.handleToggle} />       
+                <UserInput 
+                    onSubmit={this.handleSubmit}
+                    onChange={this.handleChange}
+                    currentText={inputNumber}
+                />
+                <p>{ submitted ? inputNumber : ''}</p> 
+            </React.Fragment>
         );
     }
 }
