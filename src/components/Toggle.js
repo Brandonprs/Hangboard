@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Toggle ({onToggle}){
-    return (
-        <button onClick={onToggle}>Toggle</button>
-    );
+class Toggle extends React.Component {
+    render() {
+        return (
+            <button onClick={() => onToggleClick()}>Toggle</button>
+        )
+    }
+    
 }
-
 Toggle.propTypes = {
-    onToggle: PropTypes.func.isRequired
+    onToggleClick: PropTypes.func.isRequired,
+    toggled: PropTypes.bool.isRequired
 };
 
 export default Toggle;
