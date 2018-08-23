@@ -23,18 +23,6 @@ const UserInputContainer = ({currentText, messageText}) => {
     ) 
 }
 
-const getMessageText = (state) => {
-    switch(state.toggled){
-        case true:
-            return 'Please input a string to see it reversed.'
-        case false:
-            return 'Please input a number between 1 and 100.'
-        default:
-            return 'Please input a number between 1 and 100.'
-    }
-    
-}
-
 const mapStateToProps = (state) => {
     return {
         currentText: state.currentText,

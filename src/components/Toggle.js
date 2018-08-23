@@ -1,17 +1,35 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { toggle } from '../actions/index';
+import { connect } from 'react-redux'; 
 
 class Toggle extends React.Component {
     render() {
         return (
-            <button onClick={() => onToggleClick()}>Toggle</button>
+            <button toggled='false' onClick={() => this.props.store.dispatch(toggle())}>Toggle</button>
         )
     }
     
 }
 Toggle.propTypes = {
-    onToggleClick: PropTypes.func.isRequired,
     toggled: PropTypes.bool.isRequired
 };
 
-export default Toggle;
+
+const mapStateToProps = (state) => {
+    return {
+        toggled: state.toggled
+    }
+    
+}
+
+const mapDispatchToProps = (dispatch) => ({
+    onToggleClick() {
+        return () => {
+            dispatch(toggle());
+        };
+    },
+});
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(Toggle); 

@@ -19,13 +19,13 @@ const mapStateToProps = (state) => {
     }
     
 }
-const mapDispatchToProps = (dispatch) => {
-    return {
-        onToggleClick: () => {
-            dispatch(toggle())
-        }
-    }
-}
+const mapDispatchToProps = (dispatch) => ({
+    onToggleClick() {
+        return () => {
+            dispatch(toggle());
+        };
+    },
+});
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(ToggleContainer); 
