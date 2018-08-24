@@ -10,7 +10,7 @@ const STRING_REVERSE_TEXT = 'String Reversal';
 class Toggle extends React.Component {
     render() {
         return (
-            <Button bsStyle="primary" 
+            <Button className="toggle-button" bsStyle="primary" 
                 toggled={this.props.toggled} 
                 onClick={this.props.onToggleClick()}>
                 { this.props.toggled ? 'Change to ' + FIZZBUZZ_TEXT : 'Change to ' + STRING_REVERSE_TEXT }

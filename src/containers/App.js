@@ -16,11 +16,15 @@ class App extends React.Component {
     render() {
         return (
             <div className="container main-container">
-                <h1 className="title">{ this.props.toggled ? 'String Reverser' : 'FizzBuzz' }</h1>
-                <hr/>
-                <Toggle toggled={this.props.toggled} onClick={this.props.onToggleClick()} />
-                <hr/>
-                <UserInput toggled={this.props.toggled} />
+                <div className="row h-100">
+                    <div className="col-sm-12 align-self-center">
+                        <div className = "w-25 mx-auto">
+                            <h1 className="title">{ this.props.toggled ? 'String Reverser' : 'FizzBuzz' }</h1>
+                            <Toggle toggled={this.props.toggled} onClick={this.props.onToggleClick()} />
+                            <UserInput toggled={this.props.toggled} />
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }

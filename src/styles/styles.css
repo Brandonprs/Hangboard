@@ -1,10 +1,32 @@
 .main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  padding-top: 5em;
+}
+
+.main-container .title {
+  padding: 5px;
+  font-size: 2em;
+}
+
+.main-container .toggle-button {
+  max-width: 220px;
+  margin: 15px 0;
+}
+
+.main-container .input-form-input {
+  border-radius: 5%;
+  border-style: solid;
+  width: 209px;
+  margin: 15px 0;
+  padding-left: 5px;
+}
+
+.main-container .submit-button {
+  margin-bottom: 10px;
+}
+
+.main-container .error {
+  display: block;
+  color: #ff0000;
+  margin-top: 10px;
 }
 /*# sourceMappingURL=styles.css.map */

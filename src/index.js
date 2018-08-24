@@ -1,5 +1,5 @@
 import React from 'react'
-import '../src/styles/styles.css'
+import style from '../src/styles/styles.scss'
 import { render } from 'react-dom'
 import { createStore, applyMiddleware } from 'redux'
 import { Provider } from 'react-redux'
