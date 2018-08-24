@@ -21,9 +21,5 @@ module.exports = {
         { test: /\.scss$/, loaders : [ 'style-loader', 'css-loader', 'sass-loader' ] }
     ]
 
-  },
-
-  plugins: [HtmlWebpackPluginConfig],
-
-  devtool: "#inline-source-map",
+  }
 };

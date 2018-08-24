@@ -30,17 +30,17 @@ class UserInput extends React.Component  {
     }
 
     handleSubmit(e) {
-        
         e.preventDefault();
         if(this.props.toggled) {
-            this.setState ({ output: StringReverse(this.state.currentText) });
+            this.setState ({ output: StringReverse(this.state.currentText), currentText: '' });
         } else {
             if(isNaN(parseInt(this.state.currentText, 10)) ||
                 this.state.currentText < 1 ||
                 this.state.currentText > 100) {
-                this.setState ({ output: FIZZBUZZ_PROMPT });
+                this.setState ({ output: FIZZBUZZ_PROMPT, currentText: '' });
+                
             } else {
-                this.setState ({ output: FizzBuzz(this.state.currentText) });
+                this.setState ({ output: FizzBuzz(this.state.currentText), currentText: '' });
             }
         }
         
