@@ -1,4 +1,4 @@
-# ReactRedux
+# FizzBuzz or String Reverse
 A small react app using redux
 
 ## Commands
