@@ -1,5 +1,5 @@
 {
-  "name": "string-reverser-app",
+  "name": "fizz-buzz-or--reverser-",
   "version": "1.0.0",
   "description": "Simple react-app with redux",
   "main": "index.js",
@@ -32,16 +32,23 @@
     "babel-loader": "^7.1.5",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^2.0.0",
+    "final-form": "^4.9.1",
     "html-webpack-plugin": "^3.2.0",
     "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
     "prettier": "^1.14.2",
     "prop-types": "^15.6.2",
     "react": "^16.4.2",
+    "react-bootstrap": "^0.32.3",
     "react-dom": "^16.4.2",
+    "react-final-form": "^3.6.5",
     "react-redux": "^5.0.7",
     "redux": "^4.0.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
+    "sass-webpack-plugin": "^1.0.3",
     "webpack-dev-server": "^3.1.5"
   }
 }

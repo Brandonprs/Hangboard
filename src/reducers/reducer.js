@@ -1,51 +1,22 @@
-const getMessageText = (state) => {
-    switch(state.toggled){
-        case true:
-            return 'Please input a string to see it reversed.'
-        case false:
-            return 'Please input a number between 1 and 100.'
-        default:
-            return 'Please input a number between 1 and 100.'
-    }
-    
+const STRING_REVERSE_TEXT = 'Change to String Reversal.';
+
+const initialState = {
+    currentText: '',
+    messageText: STRING_REVERSE_TEXT,
+    submitted: false,
+    toggled: false
 }
 
-const reducer = (state = {currentText: '', submitted: false, messageText: 'Please input a number between 1 and 100.', toggled: false }, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'CLICKED_SUBMIT':
-            return [
-                ...state,
-                {
-                    currentText: action.text,
-                    submitted: state.submitted,
-                    toggled: state.toggled
-                }
-            ];
         case 'TOGGLED':
-            return [
-                ...state,
-                {
-                    currentText: state.currentText,
-                    messageText: getMessageText(state),
-                    submitted: state.submitted,
-                    toggled: !state.toggled
-                }
-            ];
-        case 'CHANGED':
-            console.log(state);
-            return [
-                ...state,
-                {
-                    currentText: action.text,
-                    submitted: false,
-                    toggled: state.toggled
-                }
-                
-            ]
-            
+            return Object.assign({}, state, {
+                toggled: !state.toggled
+            })    
         default:
             return state;
     }
+    
 }
 
 
