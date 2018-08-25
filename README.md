@@ -2,8 +2,8 @@
 A small react app using redux
 
 ## Commands
---You will need to run npm install to install dependencies--
-To start server, run `npm start` from the top-level directory (where `package.json` is). Open browser and navigate to `localhost:8083`.
+--You will need to run npm install to install dependencies--\n
+To start server, run `npm start` from the top-level directory (where `package.json` is). Open browser and navigate to `localhost:9090`.
 
 ## Using the app
 Upon loading the app, you will be prompted to enter a number into the FizzBuzz application. On submit (of a number between 1 and 100), you will see the output underneat the input box.
