@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { connect } from 'react-redux';
 import Toggle from '../components/Toggle';
 import UserInput from '../components/UserInput';
-
  
 class App extends React.Component {
     constructor(props){
@@ -23,6 +22,7 @@ class App extends React.Component {
                             <Toggle toggled={this.props.toggled} onClick={this.props.onToggleClick()} />
                             <UserInput toggled={this.props.toggled} />
                         </div>
+                        
                     </div>
                 </div>
             </div>

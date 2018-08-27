@@ -7,7 +7,7 @@ const reducer = (state = initialState, action) => {
         case 'TOGGLED':
             return Object.assign({}, state, {
                 toggled: !state.toggled
-            })    
+            })
         default:
             return state;
     }
