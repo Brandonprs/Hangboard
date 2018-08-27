@@ -2,7 +2,7 @@
 A small react app using redux
 
 ## Commands
---You will need to run npm install to install dependencies--\n
+--You will need to run npm install to install dependencies--
 To start server, run `npm start` from the top-level directory (where `package.json` is). Open browser and navigate to `localhost:9090`.
 
 ## Using the app
