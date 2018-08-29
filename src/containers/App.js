@@ -7,7 +7,6 @@ import UserInput from '../components/UserInput';
 class App extends React.Component {
     constructor(props){
         super(props)
-
         this.state =  {
             toggled: false
         }
