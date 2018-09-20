@@ -16,6 +16,7 @@
     "eslint": "^3.19.0",
     "react-hot-loader": "next",
     "react-test-renderer": "^15.5.4",
+    "redux-timer-middleware": "^1.0.0",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.22.1",
     "superagent": "^3.8.3",

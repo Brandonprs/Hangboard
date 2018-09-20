@@ -2,12 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Button } from 'react-bootstrap'
-import FizzBuzz from '../utils/FizzBuzz';
-import StringReverse from '../utils/StringReverse';
-
-const FIZZBUZZ_PROMPT = 'Please input a number between 1 and 100';
-const STRING_REVERSER_PROMPT = 'Please input a string to be reversed';
-
 
 class UserInput extends React.Component  {
     constructor(props){
@@ -18,7 +12,6 @@ class UserInput extends React.Component  {
 
         this.state = {
             currentText: '',
-            toggled: false,
             output: ''
           };
 
@@ -53,7 +46,6 @@ class UserInput extends React.Component  {
         } = this.state;
         return (
             <div className="input-form">
-                <h4>{ this.props.toggled ? STRING_REVERSER_PROMPT : FIZZBUZZ_PROMPT }</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         <input className="input-form-input" type="text" value={currentText} onChange={this.handleTextChange} />
@@ -69,13 +61,12 @@ class UserInput extends React.Component  {
 
 UserInput.propTypes = {
     currentText: PropTypes.string,
-    toggled: PropTypes.bool.isRequired,
     output: PropTypes.string
 };
 
 const mapStateToProps = (state) => {
     return {
-        toggled: state.toggled
+        
     }  
 }
 

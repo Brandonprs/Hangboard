@@ -1,13 +1,19 @@
 const initialState = {
-    toggled: false
+    isOn: false,
+    time: 0
 }
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'TOGGLED':
-            return Object.assign({}, state, {
-                toggled: !state.toggled
+        case 'STARTED_TIMER':
+           return Object.assign({}, state, {
+                time: state.time + 1,
+                isOn: true
             })
+        case 'STOPPED_TIMER':
+            return Object.assign({}, state, {
+                isOn: false
+            })       
         default:
             return state;
     }
